@@ -1,4 +1,4 @@
-require 'rulers'
+require 'spec_helper'
 
 describe 'rulers/util' do
   describe 'should recognize' do
