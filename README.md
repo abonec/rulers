@@ -32,7 +32,7 @@ File ``config/application.rb``:
 File ``config.ru``:
 
     require ::File.expand_path '../config/application', __FILE__
-    run BestQuotes::Application.new
+    run YourApp::Application.new
 
 And then ``rackup`` in this foler
 
