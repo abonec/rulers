@@ -21,9 +21,9 @@ Or install it yourself as:
 Not have any generators at now.
 Need to inherit your application from Rulers::Application and and add it to rackup config file, e.g.:
 
-File ``config/application.rb``
-    module YourApp
+File ``config/application.rb``:
 
+    module YourApp
       class Application < Rulers::Application
 
       end
