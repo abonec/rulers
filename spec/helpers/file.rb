@@ -8,7 +8,10 @@ module Helpers
       end
     end
     yield
-    files.each{|name, file| File.delete file}
+    begin
+      files.each{|name, file| FileUtils.rm_rf file}
+    rescue
+    end
   end
   def get_modules(path, dir)
     result = {}
