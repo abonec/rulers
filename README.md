@@ -1,6 +1,6 @@
 # Rulers
 
-TODO: Write a gem description
+A research project to study of building web framework
 
 ## Installation
 
@@ -18,7 +18,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Not have any generators at now.
+Need to inherit your application from Rulers::Application and and add it to rackup config file, e.g.:
+
+File ``config/application.rb``
+    module YourApp
+
+      class Application < Rulers::Application
+
+      end
+    end
+
+File ``config.ru``:
+
+    require ::File.expand_path '../config/application', __FILE__
+    run BestQuotes::Application.new
+
+And then ``rackup`` in this foler
 
 ## Contributing
 
