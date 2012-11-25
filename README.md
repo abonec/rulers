@@ -1,3 +1,4 @@
+[![Build Status](https://secure.travis-ci.org/abonec/rulers.png?branch=master)](https://travis-ci.org/abonec/rulers)
 # Rulers
 
 A research project to study of building web framework
