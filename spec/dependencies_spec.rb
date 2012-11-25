@@ -12,10 +12,10 @@ describe 'rulers/dependencies' do
         FakeConstant.should_not be_nil
       end
     end
-    it "with modules" do
-      create_constant_file "FakeModule::FakeOtherConstant", @dir do
-        FakeModule::FakeOtherConstant.should_not be_nil
-      end
-    end
+    # it "with modules" do
+    #   create_constant_file "FakeModule::FakeOtherConstant", @dir do
+    #     FakeModule::FakeOtherConstant.should_not be_nil
+    #   end
+    # end
   end
 end
