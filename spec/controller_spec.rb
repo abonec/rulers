@@ -16,5 +16,8 @@ describe Rulers::Controller do
       end
     end
   end
-  
+
+  it 'should respond to controller_name' do
+    FakeController.new({}).send(:controller_name).should == 'fake'
+  end
 end
