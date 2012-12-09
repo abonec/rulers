@@ -23,4 +23,22 @@ module Helpers
     result
   end
 
+  def in_fake_dir
+    fake_dir = 'spec/fake_dir'
+    old_dir = Dir.pwd
+    FileUtils.mkdir_p fake_dir
+    Dir.chdir fake_dir
+    yield
+  ensure
+    Dir.chdir old_dir
+    FileUtils.rm_rf fake_dir
+  end
+
+  def with_file text, path
+    FileUtils.mkdir_p File.dirname path
+    File.open(path, 'w'){|f|f.write text}
+    yield
+  ensure
+    File.delete path
+  end
 end
